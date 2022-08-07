@@ -14,7 +14,7 @@ func main(){
 
 	var name = "Juang"
 	var j = name[0]
-	var jString = string(j)
+	// var jString = string(j)
 
-	fmt.Println(jString)
+	fmt.Println(j)
 }
