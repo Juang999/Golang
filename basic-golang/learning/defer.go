@@ -7,5 +7,10 @@ func logging() {
 }
 
 func runApp() {
+	defer logging()
 	fmt.Println("Run the App")
+}
+
+func main() {
+	runApp()
 }

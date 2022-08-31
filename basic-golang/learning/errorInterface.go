@@ -5,15 +5,20 @@ import (
 	"fmt"
 )
 
-func pembagi(bilangan int, pembagi int) (int, error) {
+func Pembagi(nilai int, pembagi int) (int, error) {
 	if pembagi == 0 {
-		return pembagi, errors.New('bilangan pembagi adalah', pembagi)
+		return 0, errors.New("pembagi tidak boleh 0")
 	} else {
-		return bilangan / pembagi, nil
+		result := nilai / pembagi
+		return result, nil
 	}
 }
 
 func main() {
-	var contohError error = errors.New("ini error")
-	fmt.Println(contohError)
+	hasil, err := Pembagi(100, 0)
+	if err == nil {
+		fmt.Println("Hasil", hasil)
+	} else {
+		fmt.Println("Error", err.Error())
+	}
 }
